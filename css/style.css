@@ -1,0 +1,232 @@
+
+/* 1. Thiết lập chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6f8;
+    color: #333;
+    line-height: 1.5;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* 2. Header */
+.header {
+    background-color: #c92127;
+    color: white;
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* 3. Khu vực sản phẩm */
+.product-section {
+    padding: 40px 0;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    color: #c92127;
+    font-size: 26px;
+}
+
+.section-heading p {
+    color: #777;
+    font-size: 14px;
+}
+
+.product-count {
+    color: #777;
+    font-size: 14px;
+}
+
+/* 4. Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* 5. Product Card */
+.product-card {
+    position: relative;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+}
+
+/* 6. Discount Badge */
+.discount {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #c92127;
+    color: white;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* 7. Product Image */
+.product-image {
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* 8. Product Information */
+.product-info h3 {
+    font-size: 16px;
+    min-height: 48px;
+    margin-bottom: 5px;
+}
+
+.author {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.price strong {
+    color: #c92127;
+    font-size: 18px;
+}
+
+.price del {
+    color: #999;
+    font-size: 13px;
+}
+
+/* 9. Buy Button */
+.buy-button {
+    width: 100%;
+    padding: 11px 8px;
+    background: #c92127;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buy-button {
+    transition: 0.3s ease;
+}
+
+.buy-button:hover {
+    background: #a7191e;
+    transform: scale(1.03);
+}
+
+.buy-button:active {
+    transform: scale(0.97);
+}
+}
+
+/* 10. Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    color: #777;
+    font-size: 13px;
+}
+
+/* 11. Responsive - Tablet */
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 12. Responsive - Mobile */
+@media (max-width: 600px) {
+    .container {
+        width: 94%;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .product-card {
+        padding: 10px;
+    }
+
+    .product-image {
+        height: 160px;
+    }
+
+    .product-info h3 {
+        font-size: 14px;
+    }
+
+    .price strong {
+        font-size: 16px;
+    }
+
+    .buy-button {
+        font-size: 12px;
+        padding: 10px 4px;
+    }
+
+    .section-heading h2 {
+        font-size: 22px;
+    }
+}  
